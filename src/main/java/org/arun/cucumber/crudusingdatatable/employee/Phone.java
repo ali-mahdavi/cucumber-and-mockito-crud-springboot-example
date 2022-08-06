@@ -2,13 +2,16 @@ package org.arun.cucumber.crudusingdatatable.employee;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
-import lombok.Getter;
-import lombok.Setter;
+
+import lombok.*;
 import org.arun.cucumber.crudusingdatatable.employee.ValidationGroups.CreateEmployee;
 import org.arun.cucumber.crudusingdatatable.employee.ValidationGroups.UpdateEmployee;
 
 @Getter
 @Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Phone {
   @NotNull(groups = CreateEmployee.class)
   private Long id;

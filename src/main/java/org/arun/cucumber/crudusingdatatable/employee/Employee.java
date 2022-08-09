@@ -17,7 +17,8 @@ import org.arun.cucumber.crudusingdatatable.employee.ValidationGroups.UpdateEmpl
 @AllArgsConstructor
 public class Employee {
 
-  @NotNull(groups = {UpdateEmployee.class})
+  @NotNull(groups = {
+          UpdateEmployee.class})
   @JsonProperty("id")
   private Long id;
 
@@ -40,6 +41,7 @@ public class Employee {
                      UpdateEmployee.class})
   @JsonProperty("startDate")
   public LocalDate startDate;
+
   @JsonProperty("endDate")
   public LocalDate endDate;
 
@@ -56,5 +58,6 @@ public class Employee {
   @NotNull(groups = {CreateEmployee.class,
                      UpdateEmployee.class})
   private List<Phone> phones;
+
 
 }

@@ -1,11 +1,11 @@
 package org.arun.cucumber.crudusingdatatable.employee;
 
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
-
 import lombok.*;
 import org.arun.cucumber.crudusingdatatable.employee.ValidationGroups.CreateEmployee;
 import org.arun.cucumber.crudusingdatatable.employee.ValidationGroups.UpdateEmployee;
+
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 @Getter
 @Setter
@@ -13,20 +13,20 @@ import org.arun.cucumber.crudusingdatatable.employee.ValidationGroups.UpdateEmpl
 @AllArgsConstructor
 @NoArgsConstructor
 public class Phone {
-  @NotNull(groups = CreateEmployee.class)
-  private Long id;
+    @NotNull(groups = {CreateEmployee.class})
+    private Long id;
 
-  @NotEmpty(groups = {CreateEmployee.class,
-                      UpdateEmployee.class})
-  private String type;
+    @NotEmpty(groups = {CreateEmployee.class,
+            UpdateEmployee.class})
+    private String type;
 
-  @NotEmpty(groups = {CreateEmployee.class,
-                      UpdateEmployee.class})
-  private String isdCode;
+    @NotEmpty(groups = {CreateEmployee.class,
+            UpdateEmployee.class})
+    private String isdCode;
 
-  @NotEmpty(groups = {CreateEmployee.class,
-                      UpdateEmployee.class})
-  private String phoneNumber;
+    @NotEmpty(groups = {CreateEmployee.class,
+            UpdateEmployee.class})
+    private String phoneNumber;
 
-  private String extension;
+    private String extension;
 }

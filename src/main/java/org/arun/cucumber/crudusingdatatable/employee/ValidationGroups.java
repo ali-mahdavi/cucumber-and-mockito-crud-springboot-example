@@ -5,5 +5,6 @@ public interface ValidationGroups {
   interface CreateEmployee {}
 
   interface UpdateEmployee {}
+  interface DeleteEmployee {}
 
 }
